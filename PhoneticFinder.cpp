@@ -9,6 +9,8 @@ using namespace std;
 
 
 string phonetic::find(string text, string word) {
+    if(word =="")throw out_of_range{"Wrong input, cant search empty word."};
+    string originWord =word;
     string ans;
     string ans2;
     int counter=0;
@@ -33,7 +35,7 @@ string phonetic::find(string text, string word) {
             counter=0;
         }
     }
-   throw out_of_range{"Did not find the word " + word + " in the text"};
+   throw out_of_range{"Did not find the word " + originWord + " in the text"};
     return "";
 
 }
