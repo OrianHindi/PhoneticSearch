@@ -14,12 +14,12 @@ string phonetic::find(string text, string word) {
     string ans;
     string ans2;
     int counter=0;
-    transform(word.begin(),word.end(),word.begin(),::tolower);
-    for (int i = 0; i<text.length(); ++i) {
+    transform(word.begin(),word.end(),word.begin(),::tolower);  //change the word we search to lowercase.
+    for (int i = 0; i<text.length(); ++i) {   //run on all the text.
         if(text[i]!= ' ') {
-            ans.append(1u,text[i]);
+            ans.append(1u,text[i]);   //append a char to new string.
         }
-        if(text[i]== ' ' || i==text.length()-1){
+        if(text[i]== ' ' || i==text.length()-1){   //each word in the text.
             if(ans.length()==word.length()){
                 ans2 = ans;
                 transform(ans.begin(),ans.end(),ans.begin(),::tolower);
@@ -31,7 +31,7 @@ string phonetic::find(string text, string word) {
                }
 
             }
-            ans.clear();
+            ans.clear();  //clean the string.
             counter=0;
         }
     }

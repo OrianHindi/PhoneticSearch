@@ -1,0 +1,1 @@
+/bin/clang++-9  -g   CMakeFiles/PhoeneticSearch.dir/Test.cpp.o CMakeFiles/PhoeneticSearch.dir/PhoneticFinder.cpp.o CMakeFiles/PhoeneticSearch.dir/TestCounter.cpp.o  -o PhoeneticSearch 
