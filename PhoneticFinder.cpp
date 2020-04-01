@@ -9,10 +9,11 @@ using namespace std;
 
 
 string phonetic::find(string text, string word) {
-    if(word =="")throw out_of_range{"Wrong input, cant search empty word."};
-    string originWord =word;
-    string ans;
-    string ans2;
+    word=check(word);
+    if(word =="" || text=="")throw out_of_range{"Wrong input, cant search empty word."};
+    string originWord = word;
+    string ans;                                                 //string that represent word from the text
+    string ans2;                                                //save the ans before change it to lowercase,add the origin ans
     int counter=0;
     transform(word.begin(),word.end(),word.begin(),::tolower);  //change the word we search to lowercase.
     for (int i = 0; i<text.length(); ++i) {   //run on all the text.
@@ -36,9 +37,22 @@ string phonetic::find(string text, string word) {
         }
     }
    throw out_of_range{"Did not find the word " + originWord + " in the text"};
-    return "";
-
 }
+
+string check (string word){
+    string ans;
+    int i = 0;
+    int j = word.length()-1;
+    while(word[i]==' ' || word[j]==' '){
+        if(word[i]==' ') i++;
+        if(word[j]==' ') j--;
+    }
+    for (int k = i; k <=j ; ++k) {
+        ans.append(1u,word[k]);
+    }
+    return ans;
+}
+
 
 int equalsChar(char a,char b){
     if( (b=='w' || b=='v') && (a=='w' || a=='v')) return 1;

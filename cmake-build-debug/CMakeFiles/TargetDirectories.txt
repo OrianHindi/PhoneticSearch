@@ -1,3 +1,0 @@
-/home/orian/Desktop/PhoeneticSearch/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/orian/Desktop/PhoeneticSearch/cmake-build-debug/CMakeFiles/PhoeneticSearch.dir
-/home/orian/Desktop/PhoeneticSearch/cmake-build-debug/CMakeFiles/edit_cache.dir

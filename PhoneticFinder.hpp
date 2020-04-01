@@ -7,3 +7,4 @@ namespace phonetic {
     string find(string a, string b);
 }
 int equalsChar(char a, char b);
+string check(string word);
